@@ -1,3 +1,11 @@
+# Project specific
 /build/
-/node_modules/
 /public/
+
+# Node.js
+/node_modules/
+
+# Eclipse
+.settings/
+*.classpath
+*.project
