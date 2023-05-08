@@ -21,6 +21,8 @@
   --color-brand-yellow: #FDB940;
   --color-brand-orange: #F98200;
   --color-brand-grey: #58595B;
+  --color-brand-dark: #131660;
+  --color-brand-white: #ffffff;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -41,15 +43,18 @@
   --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
   --navbar-background: var(--color-brand-blue);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
+  --navbar-font-color: var(--color-brand-white);
+  --navbar_hover-background: var(--color-brand-dark);
   --navbar-button-background: var(--color-brand-orange);
   --navbar-button-border-color: var(--color-brand-orange);
-  --navbar-button-font-color: var(--color-white);
+  --navbar-button-font-color: var(--color-brand-white);
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu_hover-background: var(--color-smoke-50);
+  --navbar-switch-background: var(--color-brand-white);
+  --navbar-switch-button-background: var(--color-brand-blue);
+  --navbar-switch-button_hover-background: var(--color-brand-dark);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);

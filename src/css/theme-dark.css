@@ -1,0 +1,29 @@
+html.theme-dark {
+  /* Just inversed all the grays defined on vars.css, i.e. white becomes black and vice versa. */
+  --color-white: #000;
+  --color-smoke-10: #191919;
+  --color-smoke-30: #222;
+  --color-smoke-50: #333;
+  --color-smoke-70: #424242;
+  --color-smoke-90: #4a4a4a;
+  --color-gray-10: #5d5d5d;
+  --color-gray-30: #808080;
+  --color-gray-40: #8e8e8e;
+  --color-gray-50: #9c9c9c;
+  --color-gray-70: #c1c1c1;
+  --color-jet-20: #e1e1e1;
+  --color-jet-30: #f0f0f0;
+  --color-jet-50: #f5f5f5;
+  --color-jet-70: #fafafa;
+  --color-jet-80: #fefefe;
+  --color-black: #fff;
+  
+  /* Inverse some brand color usages */
+  --navbar-background: var(--color-smoke-50);
+  --navbar-font-color: var(--color-black);
+  --navbar_hover-background: var(--color-gray-10);
+  
+  /* Finetune special colors */
+  --link-font-color: #55A4F1;
+  --link_hover-font-color: #88D6FF;
+}
