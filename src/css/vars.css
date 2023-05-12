@@ -70,7 +70,8 @@
   --toolbar-font-color: var(--color-brand-white);
   --toolbar-muted-color: var(--color-gray-10);
   --page-version-menu-background: var(--toolbar-background);
-  --page-version-missing-font-color: var(--toolbar-muted-color);
+  --page-version-menu-font-color: var(--toolbar-muted-color);
+  --page-version-missing-font-color: var(--color-gray-40);
   /* admonitions */
   --caution-color: #a0439c;
   --caution-on-color: var(--color-white);

@@ -105,7 +105,7 @@ body {
 
 .navbar-burger span {
   background-color: var(--navbar-font-color);
-  height: 1.5px;
+  height: 2px;
   width: 1rem;
 }
 
@@ -118,7 +118,7 @@ body {
 }
 
 .navbar-burger.is-active span + span {
-  margin-top: -1.5px;
+  margin-top: -2px;
 }
 
 .navbar-burger.is-active span:nth-child(1) {

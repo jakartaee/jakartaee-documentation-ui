@@ -33,12 +33,11 @@
   position: relative;
   top: var(--toolbar-height);
   height: var(--nav-height);
-  border-top: var(--toolbar-height) solid var(--toolbar-background);
 }
 
 @media screen and (min-width: 769px) {
   .nav {
-    box-shadow: 0.5px 0 3px var(--nav-border-color);
+    box-shadow: 1px 0 3px var(--nav-border-color);
   }
 }
 
@@ -48,6 +47,7 @@
     box-shadow: none;
     position: sticky;
     height: var(--nav-height--desktop);
+    border-top: var(--toolbar-height) solid var(--toolbar-background);
   }
 }
 
