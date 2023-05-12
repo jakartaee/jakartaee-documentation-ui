@@ -17,12 +17,11 @@ html.theme-dark {
   --color-jet-70: #fafafa;
   --color-jet-80: #fefefe;
   --color-black: #fff;
-  
+
   /* Inverse some brand color usages */
-  --navbar-background: var(--color-smoke-50);
-  --navbar-font-color: var(--color-black);
-  --navbar_hover-background: var(--color-gray-10);
-  
+  --toolbar-background: var(--color-brand-grey);
+  --toolbar-muted-color: var(--color-gray-70);
+
   /* Finetune special colors */
   --link-font-color: #55A4F1;
   --link_hover-font-color: #88D6FF;
@@ -30,8 +29,4 @@ html.theme-dark {
 
 html.theme-dark #site-title {
   background-image: url(../img/jakarta-ee-logo-white.svg);
-}
-
-html.theme-dark .home-link {
-    filter: invert();
 }

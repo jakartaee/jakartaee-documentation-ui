@@ -33,6 +33,7 @@
   position: relative;
   top: var(--toolbar-height);
   height: var(--nav-height);
+  border-top: var(--toolbar-height) solid var(--toolbar-background);
 }
 
 @media screen and (min-width: 769px) {

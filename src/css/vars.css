@@ -23,6 +23,7 @@
   --color-brand-grey: #58595B;
   --color-brand-dark: #131660;
   --color-brand-white: #ffffff;
+  --color-brand-black: #3D3D3D;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -42,8 +43,8 @@
   --scrollbar-thumb-color: var(--color-gray-10);
   --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
-  --navbar-background: var(--color-brand-blue);
-  --navbar-font-color: var(--color-brand-white);
+  --navbar-background: var(--color-white);
+  --navbar-font-color: var(--body-font-color);
   --navbar_hover-background: var(--color-brand-dark);
   --navbar-button-background: var(--color-brand-orange);
   --navbar-button-border-color: var(--color-brand-orange);
@@ -53,8 +54,8 @@
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu_hover-background: var(--color-smoke-50);
   --navbar-switch-background: var(--color-brand-white);
-  --navbar-switch-button-background: var(--color-brand-blue);
-  --navbar-switch-button_hover-background: var(--color-brand-dark);
+  --navbar-switch-button-background: var(--color-brand-black);
+  --navbar-switch-button_hover-background: var(--color-brand-grey);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
@@ -64,12 +65,12 @@
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
-  --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-gray-70);
-  --toolbar-muted-color: var(--color-gray-40);
-  --page-version-menu-background: var(--color-smoke-70);
-  --page-version-missing-font-color: var(--color-gray-40);
+  --toolbar-background: var(--color-brand-blue);
+  --toolbar-border-color: var(--color-white);
+  --toolbar-font-color: var(--color-brand-white);
+  --toolbar-muted-color: var(--color-gray-10);
+  --page-version-menu-background: var(--toolbar-background);
+  --page-version-missing-font-color: var(--toolbar-muted-color);
   /* admonitions */
   --caution-color: #a0439c;
   --caution-on-color: var(--color-white);
