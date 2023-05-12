@@ -27,3 +27,11 @@ html.theme-dark {
   --link-font-color: #55A4F1;
   --link_hover-font-color: #88D6FF;
 }
+
+html.theme-dark #site-title {
+  background-image: url(../img/jakarta-ee-logo-white.svg);
+}
+
+html.theme-dark .home-link {
+    filter: invert();
+}
