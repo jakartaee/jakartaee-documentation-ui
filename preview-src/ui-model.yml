@@ -18,7 +18,7 @@ site:
     latestVersion: *latest_version_abc
   - &component
     name: xyz
-    title: &component_title Project XYZ
+    title: &component_title Jakarta EE Reference Documentation
     url: /xyz/6.0/index.html
     versions:
     - &latest_version_xyz

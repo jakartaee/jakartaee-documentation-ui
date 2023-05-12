@@ -187,6 +187,7 @@ html.is-clipped--nav {
 .nav-panel-explore .context .version {
   display: flex;
   align-items: inherit;
+  white-space: nowrap;
 }
 
 .nav-panel-explore .context .version::after {
