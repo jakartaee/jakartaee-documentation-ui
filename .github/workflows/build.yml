@@ -30,6 +30,4 @@ jobs:
       with:
         name: UI bundle
         files: build/ui-bundle.zip
-        draft: github.event_name != 'push'
-        # Perhaps we should in the future further adjust it to `on: release` and `event_name != 'release'`
-
+        draft: ${{ startsWith(github.ref, 'refs/tags/') }}
