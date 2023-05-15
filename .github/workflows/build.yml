@@ -5,7 +5,7 @@ on:
     tags: [ '*' ]
     branches: [ main ]
   pull_request:
-    branches: [ main, JETUT-22_Fix_gulp_build_errors ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -27,8 +27,7 @@ jobs:
  
     - name: Publish UI bundle
       uses: softprops/action-gh-release@v1
-      # if: github.event_name == 'push'
+      if: github.event_name == 'push'
       with:
         name: UI bundle
         files: build/ui-bundle.zip
-        draft: true
