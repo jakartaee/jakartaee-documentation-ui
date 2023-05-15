@@ -30,4 +30,4 @@ jobs:
       with:
         name: UI bundle
         files: build/ui-bundle.zip
-        draft: ${{ startsWith(github.ref, 'refs/tags/') }}
+        draft: ${{ !startsWith(github.ref, 'refs/tags/') }}
