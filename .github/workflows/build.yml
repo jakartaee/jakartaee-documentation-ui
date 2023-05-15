@@ -25,9 +25,9 @@ jobs:
       run : gulp bundle
  
     - name: Publish UI bundle
+      uses: softprops/action-gh-release@v1
       # if: github.event_name == 'push'
-      uses: ncipollo/release-action@v1
       with:
         name: UI bundle
-        artifacts: build/ui-bundle.zip
+        files: build/ui-bundle.zip
         draft: true
