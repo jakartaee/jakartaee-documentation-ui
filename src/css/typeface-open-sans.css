@@ -1,4 +1,4 @@
-/* open-sans-latin-300-normal*/
+/* open-sans-latin-300-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -7,7 +7,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-300-normal.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-300-normal.woff') format('woff');
 }
 
-/* open-sans-latin-400-normal*/
+/* open-sans-latin-400-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -16,7 +16,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-400-normal.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-400-normal.woff') format('woff');
 }
 
-/* open-sans-latin-400-italic*/
+/* open-sans-latin-400-italic */
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
@@ -25,7 +25,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-400-italic.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-400-italic.woff') format('woff');
 }
 
-/* open-sans-latin-500-normal*/
+/* open-sans-latin-500-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -34,7 +34,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-500-normal.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-500-normal.woff') format('woff');
 }
 
-/* open-sans-latin-600-normal*/
+/* open-sans-latin-600-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -43,7 +43,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-600-normal.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-600-normal.woff') format('woff');
 }
 
-/* open-sans-latin-700-normal*/
+/* open-sans-latin-700-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -52,7 +52,7 @@
   src: url('~@fontsource/open-sans/files/open-sans-latin-700-normal.woff2') format('woff2'), url('~@fontsource/open-sans/files/open-sans-latin-700-normal.woff') format('woff');
 }
 
-/* open-sans-latin-800-normal*/
+/* open-sans-latin-800-normal */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;

@@ -23,8 +23,8 @@ html.theme-dark {
   --toolbar-muted-color: var(--color-gray-70);
 
   /* Finetune special colors */
-  --link-font-color: #55A4F1;
-  --link_hover-font-color: #88D6FF;
+  --link-font-color: #55a4f1;
+  --link_hover-font-color: #88d6ff;
 }
 
 html.theme-dark #site-title {
