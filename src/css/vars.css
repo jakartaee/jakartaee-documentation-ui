@@ -17,13 +17,13 @@
   --color-jet-70: #222;
   --color-jet-80: #191919;
   --color-black: #000;
-  --color-brand-blue: #1B208B;
-  --color-brand-yellow: #FDB940;
-  --color-brand-orange: #F98200;
-  --color-brand-grey: #58595B;
+  --color-brand-blue: #1b208b;
+  --color-brand-yellow: #fdb940;
+  --color-brand-orange: #f98200;
+  --color-brand-grey: #58595b;
   --color-brand-dark: #131660;
-  --color-brand-white: #ffffff;
-  --color-brand-black: #3D3D3D;
+  --color-brand-white: #fff;
+  --color-brand-black: #3d3d3d;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */

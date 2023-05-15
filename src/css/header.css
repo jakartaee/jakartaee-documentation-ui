@@ -242,9 +242,9 @@ body {
   .navbar-menu .navbar-link:hover {
     background: var(--navbar-menu_hover-background);
   }
-  
+
   .navbar-theme-switcher {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
