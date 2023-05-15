@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, JETUT-22_Fix_gulp_build_errors ]
 
 jobs:
   build:
@@ -29,3 +29,4 @@ jobs:
       with:
         name: UI bundle
         path: build/ui-bundle.zip
+      # if: github.event_name == 'push'
