@@ -27,7 +27,9 @@ jobs:
  
     - name: Publish UI bundle
       uses: softprops/action-gh-release@v1
-      if: github.event_name == 'push'
       with:
         name: UI bundle
         files: build/ui-bundle.zip
+        draft: github.event_name != 'push'
+        # Perhaps we should in the future further adjust it to `on: release` and `event_name != 'release'`
+
