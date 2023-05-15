@@ -11,8 +11,8 @@
   width: 2.75rem;
   height: 1.5rem;
   background: no-repeat url("../img/octicons-16.svg#view-sun") 90% 50% / 1rem 1rem, no-repeat url("../img/octicons-16.svg#view-moon") 10% 50% / 1rem 1rem;
-  background-color: var(--color-brand-white);
-  border: 1px solid var(--color-brand-dark);
+  background-color: var(--navbar-switch-background);
+  border: 1px solid var(--navbar-switch-button-background);
   border-radius: 1rem;
   outline: none;
 }
@@ -25,12 +25,12 @@
   height: 1.125rem;
   width: 1.125rem;
   border-radius: 1rem;
-  background-color: var(--navbar-background);
+  background-color: var(--navbar-switch-button-background);
   transition: transform 200ms;
 }
 
 .switch:hover input::before {
-  background-color: var(--navbar_hover-background);
+  background-color: var(--navbar-switch-button_hover-background);
 }
 
 .switch input:checked::before {

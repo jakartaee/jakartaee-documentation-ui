@@ -260,7 +260,7 @@
 
 .doc table.grid-all > thead th,
 .doc table.grid-rows > thead th {
-  border-bottom-width: 2.5px;
+  border-bottom-width: 3px;
 }
 
 .doc table.frame-all {
