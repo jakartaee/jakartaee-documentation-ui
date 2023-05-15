@@ -2,6 +2,7 @@ name: build
 
 on: 
   push:
+    tags: [ '*' ]
     branches: [ main ]
   pull_request:
     branches: [ main, JETUT-22_Fix_gulp_build_errors ]
