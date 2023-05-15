@@ -1,0 +1,33 @@
+name: build
+
+on: 
+  push:
+    tags: [ '*' ]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and publish UI bundle
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up NodeJS 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+
+    - name: Build project
+      run: npm install
+
+    - name: Create UI bundle
+      run : gulp bundle
+ 
+    - name: Publish UI bundle
+      uses: softprops/action-gh-release@v1
+      if: github.event_name == 'push'
+      with:
+        name: UI bundle
+        files: build/ui-bundle.zip
