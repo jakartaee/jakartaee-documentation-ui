@@ -25,6 +25,28 @@ jobs:
     - name: Create UI bundle
       run : gulp bundle
  
+    - name: Move 'latest' tag when main branch is pushed
+      if: github.event_name == 'push' && github.head_ref == 'main'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}          
+        script: |
+          try {
+            await github.git.deleteRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "tags/latest"
+            })
+          } catch (e) {
+            console.log("The 'latest' tag doesn't exist yet: " + e)
+          }
+          await github.git.createRef({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            ref: "refs/tags/latest",
+            sha: context.sha
+          })
+
     - name: Publish UI bundle
       uses: softprops/action-gh-release@v1
       with:
