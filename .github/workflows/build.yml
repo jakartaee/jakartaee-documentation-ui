@@ -24,7 +24,7 @@ jobs:
     - name: Create UI bundle
       run : gulp bundle
  
-    - name: Move 'latest' tag when main branch is pushed
+    - name: If pushed to main, delete 'latest' tag if any
       # if: github.event_name == 'push'
       uses: actions/github-script@v3
       with:
@@ -40,15 +40,15 @@ jobs:
           } catch (e) {
             console.log("The 'latest' tag doesn't exist yet: " + e)
           }
-          await github.git.createRef({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            ref: "refs/tags/latest",
-            sha: context.sha
-          })
-          console.log("The 'latest' tag has been set")
 
-    - name: Publish UI bundle
+    - name: If pushed to main, set 'latest' tag on current build
+      # if: github.event_name == 'push'
+      uses: anothrNick/github-tag-action@1.34.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CUSTOM_TAG: latest
+
+    - name: Publish UI bundle, as draft when not pushed to main
       uses: softprops/action-gh-release@v1
       with:
         name: UI bundle
