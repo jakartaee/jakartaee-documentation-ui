@@ -1,14 +1,14 @@
 {
-  "name": "@antora/ui-default",
-  "description": "An archetype project that produces a UI for creating documentation sites with Antora",
-  "homepage": "https://gitlab.com/antora/antora-ui-default",
+  "name": "jakartaee-tutorial/ui",
+  "description": "An archetype project that produces a UI for Jakarta EE Documentation created with Antora",
+  "homepage": "https://github.com/virtua-tech/jakartaee-tutorial-ui",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/antora/antora-ui-default.git"
+    "url": "https://github.com/virtua-tech/jakartaee-tutorial-ui.git"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 16.0.0"
   },
   "browserslist": [
     "last 2 versions"
