@@ -2,6 +2,7 @@ name: build
 
 on: 
   push:
+    tags: [ '*' ]
     branches: [ main ]
   pull_request:
     branches: [ main ]
@@ -49,9 +50,9 @@ jobs:
         tag_prefix: ''
         custom_tag: latest
 
-    - name: Publish UI bundle, as draft when not pushed to main
+    - name: Publish UI bundle, only as draft when not tagged
       uses: softprops/action-gh-release@v1
       with:
         name: UI bundle
         files: build/ui-bundle.zip
-        # draft: ${{ github.event_name != 'push' }}
+        draft: ${{ !startsWith(github.ref, 'refs/tags/') }}
