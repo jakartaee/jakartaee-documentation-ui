@@ -26,25 +26,8 @@ jobs:
     - name: Create UI bundle
       run : gulp bundle
  
-    - name: If pushed to main, delete 'latest' tag if any
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      uses: actions/github-script@v3
-      with:
-        github-token: ${{secrets.GITHUB_TOKEN}}          
-        script: |
-          try {
-            await github.git.deleteRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: "tags/latest"
-            })
-            console.log("The 'latest' tag has been deleted")
-          } catch (e) {
-            console.log("The 'latest' tag doesn't exist yet: " + e)
-          }
-
     - name: If pushed to main, set 'latest' tag on current build
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,11 +41,3 @@ jobs:
         name: Latest UI bundle
         files: build/ui-bundle.zip
         tag_name: latest
-
-    - name: If pushed as PR, publish UI bundle as draft
-      if: github.event_name == 'pull_request'
-      uses: softprops/action-gh-release@v1
-      with:
-        name: Draft UI bundle
-        files: build/ui-bundle.zip
-        draft: true
