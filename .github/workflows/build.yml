@@ -2,7 +2,6 @@ name: build
 
 on: 
   push:
-    tags: [ '*' ]
     branches: [ main ]
   pull_request:
     branches: [ main ]
@@ -26,7 +25,7 @@ jobs:
       run : gulp bundle
  
     - name: Move 'latest' tag when main branch is pushed
-      # if: github.event_name == 'push' && github.head_ref == 'main'
+      # if: github.event_name == 'push'
       uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}          
@@ -37,6 +36,7 @@ jobs:
               repo: context.repo.repo,
               ref: "tags/latest"
             })
+            console.log("The 'latest' tag has been deleted')
           } catch (e) {
             console.log("The 'latest' tag doesn't exist yet: " + e)
           }
@@ -46,10 +46,11 @@ jobs:
             ref: "refs/tags/latest",
             sha: context.sha
           })
+          console.log("The 'latest' tag has been set')
 
     - name: Publish UI bundle
       uses: softprops/action-gh-release@v1
       with:
         name: UI bundle
         files: build/ui-bundle.zip
-        draft: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        # draft: ${{ github.event_name != 'push' }}
