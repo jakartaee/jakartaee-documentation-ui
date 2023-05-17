@@ -51,10 +51,18 @@ jobs:
         tag_prefix: ''
         custom_tag: latest
 
-    - name: Publish UI bundle, only as draft when this is a PR
+    - name: If pushed to main, publish UI bundle
+      if: github.event_name == 'push'
       uses: softprops/action-gh-release@v1
       with:
-        name: UI bundle
-        tag_name: latest
+        name: Latest UI bundle
         files: build/ui-bundle.zip
-        draft: ${{ github.event_name == 'pull_request' }}
+        tag_name: latest
+
+    - name: If pushed as PR, publish UI bundle as draft
+      if: github.event_name == 'pull_request'
+      uses: softprops/action-gh-release@v1
+      with:
+        name: Draft UI bundle
+        files: build/ui-bundle.zip
+        draft: true
