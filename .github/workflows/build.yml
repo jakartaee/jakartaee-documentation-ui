@@ -55,5 +55,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         name: UI bundle
+        tag_name: latest
         files: build/ui-bundle.zip
         # draft: ${{ !startsWith(github.ref, 'refs/tags/') }}
