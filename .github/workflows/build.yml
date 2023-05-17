@@ -51,7 +51,7 @@ jobs:
         tag_prefix: ''
         custom_tag: latest
 
-    - name: If pushed to main, publish UI bundle
+    - name: If pushed to main or tagged, publish UI bundle
       if: github.event_name == 'push'
       uses: softprops/action-gh-release@v1
       with:
