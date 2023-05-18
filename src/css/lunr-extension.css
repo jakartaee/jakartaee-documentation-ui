@@ -1,0 +1,59 @@
+/* Style for https://gitlab.com/antora/antora-lunr-extension */
+/* NOTE: all selectors are prefixed with 'body' because the lunr-extension loads its CSS *after* the site CSS so it had to be a more specific selector. */
+
+body .navbar-item.search {
+  padding-right: 0;
+}
+
+body #search-input {
+  background-color: var(--color-white);
+  color: var(--color-gray-70);
+  border-color: var(--color-smoke-90);
+  height: 1.75rem;
+  border-radius: 0.15rem;
+  padding: 0.25em;
+}
+
+body #search-input:disabled {
+  background-color: var(--color-smoke-70);
+}
+
+body #search-input::placeholder {
+  color: var(--color-jet-20);
+}
+
+body #search-input:disabled::placeholder {
+  color: var(--color-gray-40);
+}
+
+body .search-result-dropdown-menu {
+  margin-top: -0.5em;
+  border-radius: 0.15rem;
+}
+
+body .search-result-dataset {
+  background-color: var(--color-white);
+  border-color: var(--color-gray-10);
+}
+
+body .search-result-component-header {
+  color: var(--color-jet-80);
+  border-bottom-color: var(--color-gray-10);
+}
+
+body .search-result-document-title {
+  color: var(--color-jet-80);
+  border-right-color: var(--color-gray-10);
+}
+
+body .search-result-document-hit {
+  color: var(--color-gray-70);
+}
+
+body .search-result-document-hit .search-result-section-title {
+  color: var(--color-jet-50);
+}
+
+body .search-result-document-hit .search-result-highlight {
+  color: var(--link-font-color);
+}

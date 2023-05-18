@@ -1,7 +1,7 @@
 /* Inspired by https://github.com/spring-io/antora-ui-spring/ */
 
 .switch {
-  display: block;
+  display: flex;
 }
 
 .switch input {
@@ -20,8 +20,8 @@
 .switch input::before {
   content: "";
   position: absolute;
-  left: 2px;
-  top: 2px;
+  left: 0.175em;
+  top: 0.175em;
   height: 1.125rem;
   width: 1.125rem;
   border-radius: 1rem;
