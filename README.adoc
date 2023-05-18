@@ -7,10 +7,11 @@
 :url-gulp: http://gulpjs.com
 :url-opendevise: https://opendevise.com
 :url-nodejs: https://nodejs.org
-:url-nvm: https://github.com/creationix/nvm
-:url-nvm-install: {url-nvm}#installation
+:url-nvm: https://github.com/nvm-sh/nvm
+:url-nvm-install: {url-nvm}#installing-and-updating
 :url-jakartaee-tutorial-ui: https://github.com/virtua-tech/jakartaee-tutorial-ui
-:url-jakartaee-tutorial-ui-release: https://github.com/virtua-tech/jakartaee-tutorial-ui/releases/tag/latest
+:url-jakartaee-tutorial-ui-actions: {url-jakartaee-tutorial-ui}/actions
+:url-jakartaee-tutorial-ui-release: {url-jakartaee-tutorial-ui}/releases/tag/latest
 :url-jakartaee-tutorial-playbook: https://github.com/virtua-tech/jakartaee-tutorial-playbook
 :url-jakartaee-tutorial-playbook-live: https://virtua-tech.github.io/jakartaee-tutorial-playbook/
 
@@ -99,7 +100,8 @@ Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
 == Deploy the project
 
-This is already done automatically by `./github/workflows/build.yml`.
+This is already done automatically by {url-jakartaee-tutorial-ui-actions}[Github Actions].
 It will generate an UI bundle tagged `latest` which is available as {url-jakartaee-tutorial-ui-release}[Latest UI bundle].
 This bundle is in turn already referenced as `ui.bundle.url` property in `antora-playbook.yml` configuration file of {url-jakartaee-tutorial-playbook}[Jakarta EE Tutorial Playbook].
+
 The live site can be found at {url-jakartaee-tutorial-playbook-live}[{url-jakartaee-tutorial-playbook-live}].
