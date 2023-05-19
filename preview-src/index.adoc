@@ -22,14 +22,46 @@ Quisque pharetra tristique arcu fringilla dapibus.
 https://example.org[Curabitur,role=unresolved] ut massa aliquam, cursus enim et, accumsan lectus.
 Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
 
-== Cu solet
+== Syntax highlighting
 
-Nominavi luptatum eos, an vim hinc philosophia intellegebat.
-Lorem pertinacia `expetenda` et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
-H~2~0.
-E = mc^2^.
-Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
-Eu mea inani iriure.footnote:[Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.]
+=== Java
+
+[,java]
+----
+@Named
+public class Bean {
+    /**
+     * Sum numbers.
+     * @param n1 first number
+     * @param n2 second number
+     * @return sum
+     */
+    public int sum(int n1, int n2) {
+        int sum = n1 + n2;
+        String log = "The sum of numbers is: " + sum;
+        System.out.println(log); // TODO: use logger
+        return sum;
+    }
+}
+----
+
+=== XML
+
+[,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <!-- The welcome file -->
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+</web-app>
+----
+
+=== JSON
 
 [,json]
 ----
@@ -44,6 +76,34 @@ Eu mea inani iriure.footnote:[Quisque porta facilisis tortor, vitae bibendum vel
   }
 }
 ----
+
+=== CSS
+
+[,css]
+----
+body #search-input {
+  background-color: var(--color-white);
+  color: var(--color-gray-70);
+  border-color: var(--color-smoke-90);
+  height: 1.75rem;
+  border-radius: 0.15rem;
+  padding: 0.25em;
+}
+
+body #search-input::placeholder {
+  color: var(--color-jet-20);
+}
+----
+
+== Cu solet
+
+Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+Lorem pertinacia `expetenda` et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
+H~2~0.
+E = mc^2^.
+Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
+Eu mea inani iriure.footnote:[Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.]
+
 
 .Example paragraph syntax
 [,asciidoc]

@@ -1,86 +1,221 @@
-/*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: var(--monospace-font-weight-bold);
-}
-
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: var(--monospace-font-weight-bold);
-}
-
-.hljs-subst {
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Source: https://highlightjs.org/static/demo/styles/github.css
+*/
+.hljs {
+  color: #24292e;
+  background: #fff;
   font-weight: normal;
 }
 
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
 .hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: var(--monospace-font-weight-bold);
+.hljs-variable.language_ {
+  color: #d73a49;
+  font-weight: normal;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  color: #6f42c1;
+  font-weight: normal;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable {
+  color: #005cc5;
+  font-weight: normal;
+}
+
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+  color: #032f62;
+  font-weight: normal;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  color: #e36209;
+  font-weight: normal;
+}
+
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+  color: #6a737d;
+  font-weight: normal;
 }
 
 .hljs-tag,
 .hljs-name,
-.hljs-attribute {
-  color: #000080;
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+  color: #22863a;
   font-weight: normal;
 }
 
-.hljs-regexp,
-.hljs-link {
-  color: #009926;
+.hljs-subst {
+  color: #24292e;
+  font-weight: normal;
 }
 
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
-
-.hljs-meta {
-  color: #999;
+.hljs-section {
+  color: #005cc5;
   font-weight: var(--monospace-font-weight-bold);
 }
 
-.hljs-deletion {
-  background: #fdd;
-}
-
-.hljs-addition {
-  background: #dfd;
+.hljs-bullet {
+  color: #735c0f;
+  font-weight: normal;
 }
 
 .hljs-emphasis {
+  color: #24292e;
   font-style: italic;
+  font-weight: normal;
 }
 
 .hljs-strong {
+  color: #24292e;
   font-weight: var(--monospace-font-weight-bold);
+}
+
+.hljs-addition {
+  color: #22863a;
+  background-color: #f0fff4;
+  font-weight: normal;
+}
+
+.hljs-deletion {
+  color: #b31d28;
+  background-color: #ffeef0;
+  font-weight: normal;
+}
+
+/*!
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Source: https://highlightjs.org/static/demo/styles/github-dark-dimmed.css
+*/
+html.theme-dark .hljs {
+  color: #adbac7;
+  background: #22272e;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-doctag,
+html.theme-dark .hljs-keyword,
+html.theme-dark .hljs-meta .hljs-keyword,
+html.theme-dark .hljs-template-tag,
+html.theme-dark .hljs-template-variable,
+html.theme-dark .hljs-type,
+html.theme-dark .hljs-variable.language_ {
+  color: #f47067;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-title,
+html.theme-dark .hljs-title.class_,
+html.theme-dark .hljs-title.class_.inherited__,
+html.theme-dark .hljs-title.function_ {
+  color: #dcbdfb;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-attr,
+html.theme-dark .hljs-attribute,
+html.theme-dark .hljs-literal,
+html.theme-dark .hljs-meta,
+html.theme-dark .hljs-number,
+html.theme-dark .hljs-operator,
+html.theme-dark .hljs-selector-attr,
+html.theme-dark .hljs-selector-class,
+html.theme-dark .hljs-selector-id,
+html.theme-dark .hljs-variable {
+  color: #6cb6ff;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-meta .hljs-string,
+html.theme-dark .hljs-regexp,
+html.theme-dark .hljs-string {
+  color: #96d0ff;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-built_in,
+html.theme-dark .hljs-symbol {
+  color: #f69d50;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-code,
+html.theme-dark .hljs-comment,
+html.theme-dark .hljs-formula {
+  color: #768390;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-tag,
+html.theme-dark .hljs-name,
+html.theme-dark .hljs-quote,
+html.theme-dark .hljs-selector-pseudo,
+html.theme-dark .hljs-selector-tag {
+  color: #8ddb8c;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-subst {
+  color: #adbac7;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-section {
+  color: #316dca;
+  font-weight: var(--monospace-font-weight-bold);
+}
+
+html.theme-dark .hljs-bullet {
+  color: #eac55f;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-emphasis {
+  color: #adbac7;
+  font-style: italic;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-strong {
+  color: #adbac7;
+  font-weight: var(--monospace-font-weight-bold);
+}
+
+html.theme-dark .hljs-addition {
+  color: #b4f1b4;
+  background-color: #1b4721;
+  font-weight: normal;
+}
+
+html.theme-dark .hljs-deletion {
+  color: #ffd8d3;
+  background-color: #78191b;
+  font-weight: normal;
 }
