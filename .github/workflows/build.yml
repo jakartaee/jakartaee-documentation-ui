@@ -63,8 +63,9 @@ jobs:
       # if: github.event_name == 'push'
       uses: convictional/trigger-workflow-and-wait@v1.6.1
       with:
+        github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
         owner: ${{ github.repository_owner }}
         repo: jakartaee-tutorial-playbook
-        github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
+        workflow_file_name: build-and-deploy.yml
         wait_workflow: false
         propagate_failure: false
