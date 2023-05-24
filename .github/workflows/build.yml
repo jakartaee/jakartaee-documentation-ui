@@ -67,5 +67,6 @@ jobs:
         owner: ${{ github.repository_owner }}
         repo: jakartaee-tutorial-playbook
         workflow_file_name: build-and-deploy.yml
+        wait_interval: 3
         wait_workflow: false
         propagate_failure: false
