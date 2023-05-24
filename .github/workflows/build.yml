@@ -61,7 +61,7 @@ jobs:
 
     - name: If published, trigger redeployment of playbook
       # if: github.event_name == 'push'
-      uses: convictional/trigger-workflow-and-wait@v1.6.1
+      uses: convictional/trigger-workflow-and-wait@v1.6.5
       with:
         github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
         owner: ${{ github.repository_owner }}
