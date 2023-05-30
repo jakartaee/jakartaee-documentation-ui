@@ -58,3 +58,15 @@ jobs:
         name: Latest UI bundle
         files: build/ui-bundle.zip
         tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'latest' }}
+
+    - name: If published, trigger redeployment of playbook
+      if: github.event_name == 'push'
+      uses: convictional/trigger-workflow-and-wait@v1.6.5
+      with:
+        github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
+        owner: ${{ github.repository_owner }}
+        repo: jakartaee-tutorial-playbook
+        workflow_file_name: build-and-deploy.yml
+        wait_interval: 3
+        wait_workflow: false
+        propagate_failure: false
