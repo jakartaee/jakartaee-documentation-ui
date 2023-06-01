@@ -98,6 +98,18 @@ This works by monitoring the project for changes, running the `preview:build` ta
 
 Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
+== Package the UI
+
+If you need to package the UI so you can use it to generate the documentation site locally, run the following command:
+
+ $ gulp bundle
+
+If any errors are reported by lint, you'll need to fix them.
+
+When the command completes successfully, the UI bundle will be available at [.path]_build/ui-bundle.zip_.
+You can if necessary point Antora at this bundle using the `--ui-bundle-url` command-line option.
+Or in `local-antora-playbook.yml` for Antora Author Mode, set the `ui.bundle.url` property to `../jakartaee-tutorial-ui/build/ui-bundle.zip`.
+
 == Deploy the project
 
 This is already done automatically by {url-jakartaee-tutorial-ui-actions}[Github Actions].
