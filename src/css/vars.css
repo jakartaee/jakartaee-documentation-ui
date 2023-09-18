@@ -135,12 +135,11 @@
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
-  --drawer-height: var(--toolbar-height);
+  --drawer-height: calc(45 / var(--rem-base) * 1rem);
   --body-top: var(--navbar-height);
   --body-min-height: calc(100vh - var(--body-top));
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
-  --nav-height--desktop: var(--body-min-height);
-  --nav-panel-menu-height: calc(100% - var(--drawer-height));
+  --nav-panel-menu-height: calc(100% - var(--toolbar-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
