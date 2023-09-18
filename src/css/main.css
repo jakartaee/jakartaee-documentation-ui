@@ -1,6 +1,5 @@
 @media screen and (max-width: 1023.5px) {
-  aside.toc.sidebar,
-  aside > .toolbar {
+  aside.toc.sidebar {
     display: none;
   }
 
