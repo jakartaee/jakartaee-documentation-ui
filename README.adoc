@@ -13,7 +13,7 @@
 :url-jakartaee-tutorial-ui-actions: {url-jakartaee-tutorial-ui}/actions
 :url-jakartaee-tutorial-ui-release: {url-jakartaee-tutorial-ui}/releases/tag/latest
 :url-jakartaee-tutorial-playbook: https://github.com/jakartaee/jakartaee-documentation
-:url-jakartaee-tutorial-playbook-live: https://jakartaee.github.io/jakartaee-documentation/jakartaee-tutorial/current/
+:url-jakartaee-tutorial-playbook-live: https://jakartaee.github.io/jakartaee-documentation/
 
 This project is forked from {url-antora-ui-default}[Antora Default UI] as per their instructions.
 
