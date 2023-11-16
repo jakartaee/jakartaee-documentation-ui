@@ -9,11 +9,11 @@
 :url-nodejs: https://nodejs.org
 :url-nvm: https://github.com/nvm-sh/nvm
 :url-nvm-install: {url-nvm}#installing-and-updating
-:url-jakartaee-tutorial-ui: https://github.com/virtua-tech/jakartaee-tutorial-ui
+:url-jakartaee-tutorial-ui: https://github.com/jakartaee/jakartaee-documentation-ui
 :url-jakartaee-tutorial-ui-actions: {url-jakartaee-tutorial-ui}/actions
 :url-jakartaee-tutorial-ui-release: {url-jakartaee-tutorial-ui}/releases/tag/latest
-:url-jakartaee-tutorial-playbook: https://github.com/virtua-tech/jakartaee-tutorial-playbook
-:url-jakartaee-tutorial-playbook-live: https://virtua-tech.github.io/jakartaee-tutorial-playbook/
+:url-jakartaee-tutorial-playbook: https://github.com/jakartaee/jakartaee-documentation
+:url-jakartaee-tutorial-playbook-live: https://jakartaee.github.io/jakartaee-documentation/
 
 This repo contains the UI for the Jakarta EE Documentation.
 
