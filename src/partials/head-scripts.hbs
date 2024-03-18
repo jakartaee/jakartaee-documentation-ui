@@ -1,10 +1,12 @@
       <!-- Google Tag Manager -->
+      <!-- Hardcoded because the standard approach (https://docs.antora.org/antora/latest/playbook/site-keys/#google-analytics-key)
+      didn't seem to be working -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
-    <!-- End Google Tag Manager -->  
+    <!-- End Google Tag Manager -->
     <script>var uiRootPath = '{{{uiRootPath}}}'</script>
     <script>!function (theme) {
         if (theme === 'dark') document.documentElement.classList.add('theme-dark')
@@ -12,4 +14,3 @@
     </script>
     <!-- Add Eclipse Foundation cookie consent to site for GA -->
     <script src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js"></script>
-    
