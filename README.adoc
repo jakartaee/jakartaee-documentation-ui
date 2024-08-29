@@ -1,4 +1,4 @@
-= Jakarta EE Tutorial UI
+= Jakarta EE Documentation UI
 
 // External URLs:
 :url-antora-ui-default: https://gitlab.com/antora/antora-ui-default
@@ -9,11 +9,11 @@
 :url-nodejs: https://nodejs.org
 :url-nvm: https://github.com/nvm-sh/nvm
 :url-nvm-install: {url-nvm}#installing-and-updating
-:url-jakartaee-tutorial-ui: https://github.com/jakartaee/jakartaee-documentation-ui
-:url-jakartaee-tutorial-ui-actions: {url-jakartaee-tutorial-ui}/actions
-:url-jakartaee-tutorial-ui-release: {url-jakartaee-tutorial-ui}/releases/tag/latest
-:url-jakartaee-tutorial-playbook: https://github.com/jakartaee/jakartaee-documentation
-:url-jakartaee-tutorial-playbook-live: https://jakartaee.github.io/jakartaee-documentation/
+:url-jakartaee-documentation-ui: https://github.com/jakartaee/jakartaee-documentation-ui
+:url-jakartaee-documentation-ui-actions: {url-jakartaee-documentation-ui}/actions
+:url-jakartaee-documentation-ui-release: {url-jakartaee-documentation-ui}/releases/tag/latest
+:url-jakartaee-documentation: https://github.com/jakartaee/jakartaee-documentation
+:url-jakartaee-documentation-live: https://jakartaee.github.io/jakartaee-documentation/
 
 This project is forked from {url-antora-ui-default}[Antora Default UI] as per their instructions.
 
@@ -108,12 +108,12 @@ If any errors are reported by lint, you'll need to fix them.
 
 When the command completes successfully, the UI bundle will be available at [.path]_build/ui-bundle.zip_.
 You can if necessary point Antora at this bundle using the `--ui-bundle-url` command-line option.
-Or in `local-antora-playbook.yml` for Antora Author Mode, set the `ui.bundle.url` property to `../jakartaee-tutorial-ui/build/ui-bundle.zip`.
+Or in `local-antora-playbook.yml` for Antora Author Mode, set the `ui.bundle.url` property to `../jakartaee-documentation-ui/build/ui-bundle.zip`.
 
 == Deploy the project
 
-This is already done automatically by {url-jakartaee-tutorial-ui-actions}[Github Actions].
-It will generate an UI bundle tagged `latest` which is available as {url-jakartaee-tutorial-ui-release}[Latest UI bundle].
-This bundle is in turn already referenced as `ui.bundle.url` property in `antora-playbook.yml` configuration file of {url-jakartaee-tutorial-playbook}[Jakarta EE Tutorial Playbook].
+This is already done automatically by {url-jakartaee-documentation-ui-actions}[Github Actions].
+It will generate an UI bundle tagged `latest` which is available as {url-jakartaee-documentation-ui-release}[Latest UI bundle].
+This bundle is in turn already referenced as `ui.bundle.url` property in `antora-playbook.yml` configuration file of {url-jakartaee-documentation}[Jakarta EE Documentation Playbook].
 
-The live site can be found at {url-jakartaee-tutorial-playbook-live}[{url-jakartaee-tutorial-playbook-live}].
+The live site can be found at {url-jakartaee-documentation-live}[{url-jakartaee-documentation-live}].
