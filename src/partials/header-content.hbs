@@ -19,11 +19,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <span class="control">
-            {{#if (eq page.component.name "cargotracker-documentation")}}
-              <a class="button is-primary" href="{{siteRootPath}}/{{page.component.name}}/{{page.componentVersion.displayVersion}}/cargo-tracker-docs.pdf">Download</a>
-            {{else if (eq page.component.name "jakartaee-tutorial")}}
-              <a class="button is-primary" href="{{siteRootPath}}/{{page.component.name}}/{{page.componentVersion.displayVersion}}/jakarta-ee-tutorial.pdf">Download</a>
-            {{/if}}
+            <a class="button is-primary" href="{{siteRootPath}}/{{page.component.name}}/{{page.componentVersion.displayVersion}}/{{page.attributes.pdf-download-name}}">Download</a>
           </span>
         </div>
       </div>
