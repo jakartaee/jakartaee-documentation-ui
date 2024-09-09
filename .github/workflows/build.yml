@@ -1,72 +1,72 @@
 name: build
 
-on:
+on: 
   push:
-    tags: ["*"]
-    branches: [main]
+    tags: [ '*' ]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build:
     name: Build and publish UI bundle
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - name: Set up NodeJS 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
+    - name: Set up NodeJS 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
 
-      - name: Build project
-        run: npm install
+    - name: Build project
+      run: npm install
 
-      - name: Create UI bundle
-        run: gulp bundle
+    - name: Create UI bundle
+      run : gulp bundle
+ 
+    - name: If pushed to main, delete 'latest' tag if any
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}          
+        script: |
+          try {
+            await github.git.deleteRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "tags/latest"
+            })
+            console.log("The 'latest' tag has been deleted")
+          } catch (e) {
+            console.log("The 'latest' tag doesn't exist yet: " + e)
+          }
 
-      - name: If pushed to main, delete 'latest' tag if any
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            try {
-              await github.git.deleteRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: "tags/latest"
-              })
-              console.log("The 'latest' tag has been deleted")
-            } catch (e) {
-              console.log("The 'latest' tag doesn't exist yet: " + e)
-            }
+    - name: If pushed to main, set 'latest' tag on current build
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: mathieudutour/github-tag-action@v6.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tag_prefix: ''
+        custom_tag: latest
 
-      - name: If pushed to main, set 'latest' tag on current build
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: mathieudutour/github-tag-action@v6.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_prefix: ""
-          custom_tag: latest
+    - name: If pushed to main or tagged, publish UI bundle
+      if: github.event_name == 'push'
+      uses: softprops/action-gh-release@v1
+      with:
+        name: Latest UI bundle
+        files: build/ui-bundle.zip
+        tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'latest' }}
 
-      - name: If pushed to main or tagged, publish UI bundle
-        if: github.event_name == 'push'
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Latest UI bundle
-          files: build/ui-bundle.zip
-          tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'latest' }}
-
-      - name: If published, trigger redeployment of playbook
-        if: github.event_name == 'push'
-        uses: convictional/trigger-workflow-and-wait@v1.6.5
-        with:
-          github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: jakartaee-documentation
-          workflow_file_name: build-and-deploy.yml
-          wait_interval: 3
-          wait_workflow: false
-          propagate_failure: false
+    - name: If published, trigger redeployment of playbook
+      if: github.event_name == 'push'
+      uses: convictional/trigger-workflow-and-wait@v1.6.5
+      with:
+        github_token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
+        owner: ${{ github.repository_owner }}
+        repo: jakartaee-documentation
+        workflow_file_name: build-and-deploy.yml
+        wait_interval: 3
+        wait_workflow: false
+        propagate_failure: false
