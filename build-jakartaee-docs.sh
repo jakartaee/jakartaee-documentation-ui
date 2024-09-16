@@ -40,7 +40,7 @@ if [ $? -ne 0 ]; then
 fi
 echo "Successfully built jakartaee-documentation."
 
-# Step 6: Open index.html from target/generated-docs based on the OS
+# Step 6: Open the site from target/generated-docs based on the OS
 echo "Opening index.html from target/generated-docs..."
 cd target/generated-docs || { echo "Error: target/generated-docs directory not found."; exit 1; }
 
