@@ -40,4 +40,22 @@ if [ $? -ne 0 ]; then
 fi
 echo "Successfully built jakartaee-documentation."
 
+# Step 6: Open index.html from target/generated-docs based on the OS
+echo "Opening index.html from target/generated-docs..."
+cd target/generated-docs || { echo "Error: target/generated-docs directory not found."; exit 1; }
+
+# Detect the operating system and open the file accordingly
+case "$OSTYPE" in
+  darwin*)  open index.html ;;             # macOS
+  linux*)   xdg-open index.html ;;         # Linux
+  msys*|cygwin*) start index.html ;;       # Windows (using Git Bash or Cygwin)
+  *)        echo "Unsupported OS: $OSTYPE. Cannot open index.html automatically." ;;
+esac
+
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to open index.html."
+  exit 1
+fi
+echo "index.html opened successfully."
+
 # End of script
