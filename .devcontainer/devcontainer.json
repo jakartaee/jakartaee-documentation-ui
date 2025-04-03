@@ -1,0 +1,14 @@
+{
+  "name": "microprofile-documentation-ui",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "git --version && node --version && npm install -g gulp-cli && npm install && gulp preview && gulp bundle"
+}
