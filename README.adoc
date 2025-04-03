@@ -12,8 +12,8 @@
 :url-microprofile-documentation-ui: https://github.com/ttelang/microprofile-documentation-ui
 :url-microprofile-documentation-ui-actions: {url-microprofile-documentation-ui}/actions
 :url-microprofile-documentation-ui-release: {url-microprofile-documentation-ui}/releases/tag/latest
-:url-microprofile-documentation: https://github.com/ttelang/microprofile-documentation
-:url-microprofile-documentation-live: https://microprofile.github.io/microprofile-documentation/
+:url-microprofile-documentation: https://github.com/ttelang/microprofile-tutorial
+:url-microprofile-documentation-live: https://ttelang.github.io/microprofile-tutorial/
 
 This project is forked from {url-antora-ui-default}[Antora Default UI] as per their instructions.
 
