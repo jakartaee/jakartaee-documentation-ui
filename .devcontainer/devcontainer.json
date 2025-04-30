@@ -1,0 +1,14 @@
+{
+  "name": "microprofile-documentation-ui",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.vscode-github-actions"
+      ]
+    }
+  },
+  "postCreateCommand": "git --version && node --version && npm install -g gulp-cli && npm install && gulp preview && gulp bundle"
+}

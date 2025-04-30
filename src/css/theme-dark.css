@@ -28,7 +28,7 @@ html.theme-dark {
 }
 
 html.theme-dark #site-title {
-  background-image: url(../img/jakarta-ee-logo-white.svg);
+  background-image: url(../img/microprofile-logo-no_tagline-white.svg);
 }
 
 /* NOTE: at bottom of highlight.js there's also a html.theme-dark block */
