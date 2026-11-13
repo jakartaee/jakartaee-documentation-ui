@@ -24,7 +24,7 @@ jobs:
       run: npm install
 
     - name: Create UI bundle
-      run : gulp bundle
+      run : npx gulp bundle
  
     - name: If pushed to main, delete 'latest' tag if any
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
