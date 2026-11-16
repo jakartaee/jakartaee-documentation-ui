@@ -19,7 +19,9 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <span class="control">
-            <a class="button is-primary" href="{{siteRootPath}}/{{page.component.name}}/{{page.componentVersion.displayVersion}}/{{page.attributes.pdf-download-name}}">Download</a>
+            {{#if page.file.assembler.pdf}}
+            <a class="button is-primary" href="{{relativize page.file.assembler.pdf.file.pub.url}}"{{#if page.attributes.pdf-download-name}} download="{{page.attributes.pdf-download-name}}"{{/if}}>Download</a>
+            {{/if}}
           </span>
         </div>
       </div>
